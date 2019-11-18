@@ -1,0 +1,27 @@
+﻿<Window x:Class="UserControll.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserControll"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <local:DirectorySelector x:Name="uno" Titulo="Directorio de Trabajo"></local:DirectorySelector>
+        <local:DirectorySelector x:Name="dos" Titulo="Directorio temporal"></local:DirectorySelector>
+        <local:DirectorySelector x:Name="tres" Titulo="Directorio de log"></local:DirectorySelector>
+
+        <TextBlock>
+            <Run Text="Directorio de Trabajo: "/>
+            <Run Text="{Binding ElementName=uno, Path=Ruta}"/>
+        </TextBlock>
+        <TextBlock>
+            <Run Text="Directorio temporal: "/>
+            <Run Text="{Binding ElementName=dos, Path=Ruta}"/>
+        </TextBlock>
+        <TextBlock>
+            <Run Text="Directorio de log: "/>
+            <Run Text="{Binding ElementName=tres, Path=Ruta}"/>
+        </TextBlock>
+    </StackPanel>
+</Window>
